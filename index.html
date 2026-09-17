@@ -8,11 +8,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rodrigo Alemany — Director de Fotografía</title>
+    <title>Rodrigo Alemany</title>
 
-    <meta name="description" content="Rodrigo Alemany — Director de Fotografía y cámara. Publicidad, documental, cine y videoclips.">
+    <meta name="description" content="Rodrigo Alemany — Camera Crew & Photography">
 
     <style>
+
+        /* =========================
+
+           CONFIGURACIÓN GENERAL
+
+           ========================= */
 
         * {
 
@@ -32,13 +38,11 @@
 
         body {
 
-            background: #0a0a0a;
+            background: #061426;
 
-            color: #f2f2f2;
+            color: white;
 
             font-family: Arial, Helvetica, sans-serif;
-
-            font-weight: 400;
 
         }
 
@@ -50,19 +54,85 @@
 
         }
 
-        /* ---------- MENÚ ---------- */
+        /* =========================
 
-        nav {
+           PORTADA
 
-            position: fixed;
+           ========================= */
 
-            top: 0;
+        .home {
+
+            height: 100vh;
+
+            min-height: 600px;
+
+            position: relative;
+
+            background-image:
+
+                linear-gradient(
+
+                    rgba(3, 18, 35, 0.18),
+
+                    rgba(3, 18, 35, 0.18)
+
+                ),
+
+                url("fondo.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+        /* =========================
+
+           NOMBRE
+
+           ========================= */
+
+        .name {
+
+            position: absolute;
+
+            top: 9.5%;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            font-size: clamp(18px, 1.8vw, 30px);
+
+            font-weight: 300;
+
+            letter-spacing: 0.55em;
+
+            white-space: nowrap;
+
+            text-align: center;
+
+        }
+
+        /* =========================
+
+           MENÚ PRINCIPAL
+
+           ========================= */
+
+        .menu {
+
+            position: absolute;
+
+            top: 49%;
 
             left: 0;
 
             width: 100%;
-
-            padding: 28px 40px;
 
             display: flex;
 
@@ -70,335 +140,189 @@
 
             align-items: center;
 
-            z-index: 100;
-
-            mix-blend-mode: difference;
+            padding: 0 4.3%;
 
         }
 
-        .logo {
+        .menu a {
 
-            font-size: 15px;
+            font-size: clamp(15px, 1.5vw, 25px);
 
-            font-weight: bold;
+            font-weight: 300;
 
-            letter-spacing: 1px;
+            letter-spacing: 0.55em;
+
+            white-space: nowrap;
+
+            transition: opacity 0.3s ease;
 
         }
 
-        nav ul {
+        .menu a:hover {
 
-            list-style: none;
+            opacity: 0.45;
+
+        }
+
+        /* =========================
+
+           SECCIONES
+
+           ========================= */
+
+        .section {
+
+            min-height: 100vh;
+
+            padding: 120px 7vw;
+
+            background: #061426;
+
+        }
+
+        .section h2 {
+
+            font-size: clamp(45px, 8vw, 120px);
+
+            font-weight: 300;
+
+            letter-spacing: 0.08em;
+
+            margin-bottom: 80px;
+
+        }
+
+        .section p {
+
+            max-width: 850px;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            color: rgba(255,255,255,0.7);
+
+        }
+
+        /* =========================
+
+           CAMERA CREW
+
+           ========================= */
+
+        #camera {
+
+            background: #050f1d;
+
+        }
+
+        /* =========================
+
+           PHOTOGRAPHY
+
+           ========================= */
+
+        #photography {
+
+            background: #08192c;
+
+        }
+
+        /* =========================
+
+           CONTACTO
+
+           ========================= */
+
+        #contact {
+
+            min-height: 70vh;
+
+            background: #030b14;
 
             display: flex;
 
-            gap: 30px;
+            flex-direction: column;
 
-            font-size: 13px;
+            justify-content: center;
 
         }
 
-        nav a:hover {
+        .contact-email {
+
+            font-size: clamp(25px, 4vw, 60px);
+
+            font-weight: 300;
+
+            letter-spacing: 0.05em;
+
+            margin-top: 20px;
+
+        }
+
+        .contact-email:hover {
 
             opacity: 0.5;
 
         }
 
-        /* ---------- PORTADA ---------- */
+        /* =========================
 
-        .hero {
+           MÓVIL
 
-            min-height: 100vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: flex-end;
-
-            padding: 40px;
-
-            padding-bottom: 55px;
-
-        }
-
-        .hero-small {
-
-            font-size: 13px;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-            margin-bottom: 18px;
-
-        }
-
-        h1 {
-
-            font-size: clamp(55px, 10vw, 150px);
-
-            line-height: 0.85;
-
-            letter-spacing: -6px;
-
-            font-weight: 500;
-
-            max-width: 1200px;
-
-        }
-
-        .hero-bottom {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            margin-top: 45px;
-
-            font-size: 13px;
-
-            color: #999;
-
-        }
-
-        /* ---------- SECCIONES ---------- */
-
-        section {
-
-            padding: 140px 40px;
-
-        }
-
-        .section-title {
-
-            font-size: 12px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 2px;
-
-            color: #777;
-
-            margin-bottom: 70px;
-
-        }
-
-        /* ---------- PROYECTOS ---------- */
-
-        .projects {
-
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-
-            gap: 20px;
-
-        }
-
-        .project {
-
-            aspect-ratio: 16 / 10;
-
-            background: #181818;
-
-            display: flex;
-
-            align-items: flex-end;
-
-            padding: 25px;
-
-            transition: transform 0.4s ease;
-
-        }
-
-        .project:hover {
-
-            transform: scale(0.98);
-
-        }
-
-        .project-info {
-
-            width: 100%;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            font-size: 13px;
-
-        }
-
-        .project-type {
-
-            color: #888;
-
-        }
-
-        /* ---------- ABOUT ---------- */
-
-        .about {
-
-            max-width: 1000px;
-
-        }
-
-        .about p {
-
-            font-size: clamp(30px, 4vw, 55px);
-
-            line-height: 1.08;
-
-            letter-spacing: -2px;
-
-        }
-
-        /* ---------- CONTACTO ---------- */
-
-        .contact {
-
-            min-height: 70vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: space-between;
-
-        }
-
-        .contact h2 {
-
-            font-size: clamp(55px, 10vw, 150px);
-
-            line-height: 0.85;
-
-            letter-spacing: -6px;
-
-            font-weight: 500;
-
-        }
-
-        .contact-links {
-
-            display: flex;
-
-            gap: 30px;
-
-            font-size: 13px;
-
-        }
-
-        .contact-links a {
-
-            border-bottom: 1px solid #555;
-
-            padding-bottom: 5px;
-
-        }
-
-        .contact-links a:hover {
-
-            border-color: white;
-
-        }
-
-        /* ---------- FOOTER ---------- */
-
-        footer {
-
-            padding: 30px 40px;
-
-            border-top: 1px solid #222;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            font-size: 11px;
-
-            color: #666;
-
-        }
-
-        /* ---------- MÓVIL ---------- */
+           ========================= */
 
         @media (max-width: 700px) {
 
-            nav {
+            .home {
 
-                padding: 22px;
+                min-height: 100vh;
 
-            }
-
-            nav ul {
-
-                gap: 15px;
+                background-position: center;
 
             }
 
-            nav li:nth-child(2) {
+            .name {
 
-                display: none;
+                top: 10%;
 
-            }
+                font-size: 15px;
 
-            .hero {
-
-                padding: 22px;
-
-                padding-bottom: 35px;
+                letter-spacing: 0.38em;
 
             }
 
-            h1 {
+            .menu {
 
-                letter-spacing: -3px;
+                top: 50%;
 
-            }
-
-            .hero-bottom {
-
-                margin-top: 30px;
+                transform: translateY(-50%);
 
                 flex-direction: column;
 
-                gap: 10px;
+                gap: 45px;
+
+                padding: 0;
 
             }
 
-            section {
+            .menu a {
 
-                padding: 100px 22px;
+                font-size: 15px;
 
-            }
-
-            .projects {
-
-                grid-template-columns: 1fr;
+                letter-spacing: 0.35em;
 
             }
 
-            .about p {
+            .section {
 
-                letter-spacing: -1px;
-
-            }
-
-            .contact-links {
-
-                flex-direction: column;
-
-                gap: 18px;
-
-                align-items: flex-start;
+                padding: 100px 25px;
 
             }
 
-            footer {
+            .section h2 {
 
-                padding: 25px 22px;
+                margin-bottom: 50px;
 
             }
 
@@ -410,201 +334,119 @@
 
 <body>
 
-    <!-- MENÚ -->
+    <!-- =========================
 
-    <nav>
+         PORTADA
 
-        <a href="#" class="logo">RODRIGO ALEMANY</a>
+         ========================= -->
 
-        <ul>
+    <main class="home" id="home">
 
-            <li><a href="#work">WORK</a></li>
+        <div class="name">
 
-            <li><a href="#about">ABOUT</a></li>
-
-            <li><a href="#contact">CONTACT</a></li>
-
-        </ul>
-
-    </nav>
-
-    <!-- PORTADA -->
-
-    <header class="hero">
-
-        <div>
-
-            <div class="hero-small">
-
-                Director de Fotografía · Camera
-
-            </div>
-
-            <h1>
-
-                RODRIGO<br>
-
-                ALEMANY
-
-            </h1>
+            RODRIGO ALEMANY
 
         </div>
 
-        <div class="hero-bottom">
+        <nav class="menu">
 
-            <span>Madrid · Spain</span>
+            <a href="#camera">
 
-            <span>Film · Commercial · Documentary</span>
-
-        </div>
-
-    </header>
-
-    <!-- TRABAJOS -->
-
-    <section id="work">
-
-        <div class="section-title">
-
-            Selected Work
-
-        </div>
-
-        <div class="projects">
-
-            <a href="#" class="project">
-
-                <div class="project-info">
-
-                    <span>PROJECT 01</span>
-
-                    <span class="project-type">COMMERCIAL</span>
-
-                </div>
+                CAMERA CREW
 
             </a>
 
-            <a href="#" class="project">
+            <a href="#photography">
 
-                <div class="project-info">
-
-                    <span>PROJECT 02</span>
-
-                    <span class="project-type">DOCUMENTARY</span>
-
-                </div>
+                PHOTOGRAPHY
 
             </a>
 
-            <a href="#" class="project">
+            <a href="#contact">
 
-                <div class="project-info">
-
-                    <span>PROJECT 03</span>
-
-                    <span class="project-type">MUSIC VIDEO</span>
-
-                </div>
+                CONTACT
 
             </a>
 
-            <a href="#" class="project">
+        </nav>
 
-                <div class="project-info">
+    </main>
 
-                    <span>PROJECT 04</span>
+    <!-- =========================
 
-                    <span class="project-type">SHORT FILM</span>
+         CAMERA CREW
 
-                </div>
+         ========================= -->
 
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- SOBRE MÍ -->
-
-    <section id="about">
-
-        <div class="section-title">
-
-            About
-
-        </div>
-
-        <div class="about">
-
-            <p>
-
-                Director de fotografía y cámara
-
-                interesado en crear imágenes con
-
-                identidad, desde la publicidad y el
-
-                documental hasta el cine y los
-
-                videoclips.
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- CONTACTO -->
-
-    <section id="contact" class="contact">
-
-        <div class="section-title">
-
-            Contact
-
-        </div>
+    <section class="section" id="camera">
 
         <h2>
 
-            LET'S<br>
-
-            WORK.
+            CAMERA CREW
 
         </h2>
 
-        <div class="contact-links">
+        <p>
 
-            <a href="mailto:tuemail@email.com">
+            Camera operator and cinematography work for
 
-                EMAIL
+            advertising, documentary, short films and music videos.
 
-            </a>
-
-            <a href="#" target="_blank">
-
-                INSTAGRAM
-
-            </a>
-
-            <a href="#" target="_blank">
-
-                LINKEDIN
-
-            </a>
-
-        </div>
+        </p>
 
     </section>
 
-    <!-- FOOTER -->
+    <!-- =========================
 
-    <footer>
+         PHOTOGRAPHY
 
-        <span>© 2026 Rodrigo Alemany</span>
+         ========================= -->
 
-        <span>Madrid, Spain</span>
+    <section class="section" id="photography">
 
-    </footer>
+        <h2>
+
+            PHOTOGRAPHY
+
+        </h2>
+
+        <p>
+
+            Photography projects, portraits, editorial work
+
+            and personal projects.
+
+        </p>
+
+    </section>
+
+    <!-- =========================
+
+         CONTACT
+
+         ========================= -->
+
+    <section class="section" id="contact">
+
+        <h2>
+
+            CONTACT
+
+        </h2>
+
+        <a
+
+            class="contact-email"
+
+            href="mailto:TUEMAIL@EMAIL.COM"
+
+        >
+
+            TUEMAIL@EMAIL.COM
+
+        </a>
+
+    </section>
 
 </body>
 
