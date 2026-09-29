@@ -66,24 +66,41 @@
 
         /* ---------- PORTADA ---------- */
 
-       .hero {
+.hero {
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 40px;
     padding-bottom: 55px;
+}
 
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.18),
-            rgba(0, 0, 0, 0.18)
-        ),
-        url("fondo.jpg");
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+    transform: translate(-50%, -50%);
+    border: 0;
+    pointer-events: none;
+}
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 1;
+}
+
+.hero > div {
+    position: relative;
+    z-index: 2;
 }
 
         .hero-small {
@@ -285,7 +302,13 @@
     <!-- PORTADA -->
 
     <header class="hero">
-
+<iframe
+    class="hero-video"
+    src="https://player.vimeo.com/video/1231250235?background=1&autoplay=1&loop=1&muted=1"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    allowfullscreen>
+</iframe>
         <div>
             <div class="hero-small">
                 Director de Fotografía · Camera
