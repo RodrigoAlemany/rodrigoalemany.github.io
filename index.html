@@ -237,87 +237,71 @@
 
         /* ---------- MÓVIL ---------- */
 
-        @media (max-width: 700px) {
-
-            nav {
-                padding: 22px;
-            }
-
-            nav ul {
-                gap: 15px;
-            }
-
-            nav li:nth-child(2) {
-                display: none;
-            }
-
-            .hero {
-                padding: 22px;
-                padding-bottom: 35px;
-            }
-
-            h1 {
-                letter-spacing: -3px;
-            }
-
-            .hero-bottom {
-                margin-top: 30px;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            section {
-                padding: 100px 22px;
-            }
-
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .about p {
-                letter-spacing: -1px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                gap: 18px;
-                align-items: flex-start;
-            }
-
-           footer {
-
-        padding: 25px 22px;
-
-    }
-
-    .desktop-video {
-
-        display: none;
-
-    }
-
-    .mobile-video {
-
-        display: block;
-
-        object-fit: cover;
-
-    }
-
-}
-/* AJUSTE DEFINITIVO DEL TITULO EN MOVIL */
-
 @media screen and (max-width: 700px) {
 
+    /* NAVEGACIÓN */
+    nav {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav li:nth-child(2) {
+        display: none;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 100svh;
+        height: 100svh;
+        padding: 20px;
+        box-sizing: border-box;
+
+        /* CENTRAR EL CONTENIDO */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* BLOQUE DE TEXTO */
     .hero-content {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
-        transform: translateY(20px);
+
+        /* CENTRADO VERTICAL Y HORIZONTAL */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        transform: none;
+        text-align: center;
     }
 
+
+    /* TEXTO PEQUEÑO */
+    .hero-small {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        font-size: 11px;
+        line-height: 1.3;
+
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+
+
+    /* RODRIGO ALEMANY */
     .hero-content h1 {
         display: block;
+
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -329,25 +313,58 @@
         margin: 0 !important;
         padding: 0 !important;
 
+        text-align: center;
+
         white-space: normal;
         overflow-wrap: normal;
         word-break: normal;
     }
 
-    .hero-small {
+
+    /* VÍDEO */
+    .desktop-video {
+        display: none;
+    }
+
+    .mobile-video {
+        display: block;
         width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        font-size: 11px;
-        line-height: 1.3;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* SECCIONES */
+    section {
+        padding: 80px 20px;
+    }
+
+
+    /* PROYECTOS */
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ABOUT */
+    .about p {
+        letter-spacing: -0.5px;
+    }
+
+
+    /* CONTACTO */
+    .contact-links {
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 25px 20px;
     }
 }
-    </style>
-</head>
-
-
-<body>
-
     <!-- MENÚ -->
 
     <nav>
